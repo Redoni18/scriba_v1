@@ -3,10 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "watch": "bun build ./src/*.ts --outdir ./dist --watch --target node",
+    "watch": "bun build ./src/*.ts --outdir ./dist --watch --target bun",
     "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "bun build ./src/index.ts ./src/services/*.ts --outdir ./dist --target node",
+    "start": "bun run dist/index.js",
+    "build": "bun build ./src/index.ts ./src/services/*.ts --outdir ./dist --target bun",
     "type-check": "tsc --noEmit",
     "prisma:generate": "bunx prisma generate",
     "prisma:migrate": "bunx prisma migrate dev",
