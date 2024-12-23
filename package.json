@@ -1,0 +1,29 @@
+{
+  "name": "scriba_v1",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "watch": "bun build ./src/*.ts --outdir ./dist --watch --target node",
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build ./src/index.ts ./src/services/*.ts --outdir ./dist --target node",
+    "type-check": "tsc --noEmit",
+    "prisma:generate": "bunx prisma generate",
+    "prisma:migrate": "bunx prisma migrate dev",
+    "prisma:studio": "bunx prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/node-cron": "^3.0.11",
+    "bun-types": "latest",
+    "prisma": "^6.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "node-cron": "^3.0.3",
+    "typescript": "^5.7.2"
+  }
+}
